@@ -5,11 +5,16 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sprites name="sprites">
+    <sprite>sprites\spr_progress_bar</sprite>
+    <sprite>sprites\spr_progress_block</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\object0</object>
+    <object>objects\obj_progress_bar</object>
+    <object>objects\obj_progress_block</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_room</room>

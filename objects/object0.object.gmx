@@ -25,16 +25,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// show number of clicks
-global.num_clicks = 0
+            <string>// clicker count
+global.num_clicks = 0;
+global.max_clicks = 50;
 
+// People count 
+global.num_villagers = 0;
+global.num_miners = 0;
+global.num_warriors = 0;
 
+// Weapons and Armor count
+global.num_weapons = 0;
+global.num_shields = 0;
+global.num_armor = 0;
+
+// material count
+global.num_wood = 0;
+global.num_stone = 0;
+global.num_metal = 0;
+global.num_gems = 0;
+
+global.stats = array_create(9);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -51,16 +68,49 @@ global.num_clicks = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw numbr of clicks
+            <string>global.num_villagers +=1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Drawing UI
 
-if keyboard_check_released(vk_space)
+/*
+    Clicking
+*/
+if keyboard_check_released(vk_space) // TODO: change this to click button
 {
+    if(global.num_clicks &gt;= global.max_clicks)
+    {
+        global.num_clicks = 0;
+        ++global.num_weapons;
+        global.p_offset = 0;
+    }
     ++global.num_clicks;
     show_debug_message("pressed space");
 }
 
-draw_text(x,y, "number of clicks:" + string(global.num_clicks));
-
+/*
+    Get the current day
+*/
 var day;
 switch(current_weekday)
    {
@@ -72,7 +122,35 @@ switch(current_weekday)
    case 5: day = "Friday"; break;
    case 6: day = "Saturday"; break;
    }
-draw_text(x+20, y+20, "Today is " + day +".");
+   
+/*
+    timers
+*/
+if(alarm[0] &lt; 1) alarm[0] = 100;
+
+
+/*
+    Display info
+*/
+draw_text(300,0, "Today is " + day +".");
+draw_text(0,0, "number of clicks:" + string(global.num_clicks) + "/" + 
+string(global.max_clicks));
+
+draw_text(0,10, "number of weapons:" + string(global.num_weapons));
+
+draw_text(0,20, "number of villagers:" + string(global.num_villagers));
+
+/*
+    Draw button
+*/
+draw_button(400,700,450,750,!mouse_check_button_pressed(mb_left));
+draw_button(500,700,550,750,!mouse_check_button_pressed(mb_left));
+draw_button(600,700,650,750,!mouse_check_button_pressed(mb_left));
+
+
+
+
+
 </string>
           </argument>
         </arguments>
