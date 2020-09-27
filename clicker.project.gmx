@@ -6,16 +6,30 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_progress_bar</sprite>
-    <sprite>sprites\spr_progress_block</sprite>
+    <sprites name="Monsters">
+      <sprite>sprites\spr_people</sprite>
+    </sprites>
+    <sprites name="Textures">
+      <sprites name="cave">
+        <sprite>sprites\spr_cave_01</sprite>
+        <sprite>sprites\spr_cave_02</sprite>
+        <sprite>sprites\spr_cave_03</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_info</object>
+    <object>objects\obj_ui</object>
+    <object>objects\obj_people</object>
+    <objects name="Room_objects">
+      <object>objects\obj_cave</object>
+      <object>objects\obj_cave_02</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_room</room>
+    <room>rooms\rm_cave</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
