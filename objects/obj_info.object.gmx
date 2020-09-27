@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// clicker count
+            <string>draw_set_colour(c_black);
+
+// clicker count
 global.num_clicks = 0;
 global.max_clicks = 50;
 
@@ -133,6 +135,7 @@ if(alarm[0] &lt; 1) alarm[0] = 100;
     Display info
 */
 draw_text(300,0, "Today is " + day +".");
+
 draw_text(0,0, "number of clicks:" + string(global.num_clicks) + "/" + 
 string(global.max_clicks));
 
@@ -143,9 +146,14 @@ draw_text(0,20, "number of villagers:" + string(global.num_villagers));
 /*
     Draw button
 */
-draw_button(400,700,450,750,!mouse_check_button_pressed(mb_left));
-draw_button(500,700,550,750,!mouse_check_button_pressed(mb_left));
-draw_button(600,700,650,750,!mouse_check_button_pressed(mb_left));
+draw_text(400, 650, "Weapons");
+draw_button(400,700,450,750,point_in_rectangle(mouse_x, mouse_y,400,700,450,750) &amp;&amp; !mouse_check_button_pressed(mb_left));
+
+draw_text(500, 650, "Armor");
+draw_button(500,700,550,750,point_in_rectangle(mouse_x, mouse_y,500,700,550,750) &amp;&amp; !mouse_check_button_pressed(mb_left));
+
+draw_text(600, 650, "Mining");
+draw_button(600,700,650,750,point_in_rectangle(mouse_x, mouse_y,600,700,650,750) &amp;&amp; !mouse_check_button_pressed(mb_left));
 
 
 
