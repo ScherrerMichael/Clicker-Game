@@ -5,11 +5,24 @@ Clicker game where the player is a weaponsmith.
 
 Setting of the game will be a low fantasy medieval world. There will be dragons, skeletons, and ogres and stuff.
 
-Your job is to supply the army with weapons/armour/housing. And manage the village.
+Your job is to supply the army with weapons/armour/housing/defenses. And manage the village.
 
 
 
 ## Gameplay
+
+### Villagers
+Villagers are the loswest tier of pawns, they are created automatically. The rate at which they are created depend on the number of [houses](### Housing) and [food](### Food). Once there is enough material to create a new type of pawn type, the player can choose to improve their class in bulk or individually.
+
+### Food
+Food is gathered passivly from the village, or systematically from a returned caravan.
+
+### Housing
+The number of houses increase the rate at which base villagers spawn.
+
+### Mining
+### Hunting
+### Crafting
 * Very visible sense of progression (often a number total, basically a counter)
 * Ways to increase progression (increase counter growth)
 * Progression while offline (Idle gameplay)

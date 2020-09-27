@@ -155,7 +155,7 @@ draw_text(400, 650, "Weapons");
 if(point_in_rectangle(mouse_x, mouse_y,400,700,450,750) &amp;&amp; mouse_check_button_pressed(mb_left))
 {
     draw_button(400,700,450,750, true);
-    global.rm = 0;
+    room_goto(rm_room);
 }
 else
 {
