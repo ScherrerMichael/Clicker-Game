@@ -142,9 +142,9 @@ draw_text(300,0, "Today is " + day +".");
 draw_text(0,0, "number of clicks:" + string(global.num_clicks) + "/" + 
 string(global.max_clicks));
 
-draw_text(0,10, "number of weapons:" + string(global.num_weapons));
+draw_text(0,55, "number of weapons:" + string(global.num_weapons));
 
-draw_text(0,20, "number of villagers:" + string(global.num_villagers));
+draw_text(0,60, "number of villagers:" + string(global.num_villagers));
 
 /*
     Draw button, and add functionality
@@ -187,6 +187,8 @@ else
     draw_button(600,700,650,750, false)
 }
 
+// draw progress bar
+draw_rectangle(0,0,(global.num_clicks / global.max_clicks) * 500 ,50, true);
 
 
 

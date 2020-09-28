@@ -12,7 +12,7 @@ Your job is to supply the army with weapons/armour/housing/defenses. And manage 
 ## Gameplay
 
 ### Villagers
-Villagers are the loswest tier of pawns, they are created automatically. The rate at which they are created depend on the number of [houses](### Housing) and [food](### Food). Once there is enough material to create a new type of pawn type, the player can choose to improve their class in bulk or individually.
+Villagers are the loswest tier of pawns, they are created automatically. The rate at which they are created depend on the number of [houses](#Housing) and [food](#Food). Once there is enough material to create a new type of pawn type, the player can choose to improve their class in bulk or individually.
 
 ### Food
 Food is gathered passivly from the village, or systematically from a returned caravan.
@@ -21,8 +21,18 @@ Food is gathered passivly from the village, or systematically from a returned ca
 The number of houses increase the rate at which base villagers spawn.
 
 ### Mining
+Mining produces ores that are used for crafting many things.
+
 ### Hunting
+Hunting can be used to gather rare materials from monsters to be used in crafting items and weapons
+
 ### Crafting
+Houses, Weapons, Armor are crafted using materials gathered by villagers.
+
+### Progression
+
+
+### Notes
 * Very visible sense of progression (often a number total, basically a counter)
 * Ways to increase progression (increase counter growth)
 * Progression while offline (Idle gameplay)
